@@ -206,7 +206,7 @@ class Matrix:
                 for chunk in response.iter_content(chunk_size=4096):
                     outfile.write(chunk)
                     pbar.update(4096)
-                    time.sleep(0.1)
+                    time.sleep(0.001)
 
             if extract and (format == "MM" or format == "RB"):
                 bundle.extract(localdest)
